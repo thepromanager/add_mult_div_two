@@ -38,12 +38,16 @@ function Player(x,y,w,h,wasd,name){
 		rect(this.x+this.w*0/7,this.y+this.h*3/6,this.w/7,this.h/6)
 		rect(this.x+this.w*2/7,this.y,this.w/7,this.h/6)
 		rect(this.x+this.w*1/7,this.y+this.h*1/6,this.w*4/7,this.h/2)
-		rect(this.x,this.y+2*this.h/3,this.w-1,this.h/3-1)
-		if(this.win===1){
+		
+		if(this.win===3){
 			fill(0,255,0)
-			rect(this.x,this.y+2*this.h/3,this.w-1,this.h/3-1)
+		}else if(this.win===2){
+			fill(255,255,0)
+		}else if(this.win===1){
+			fill(255,0,0)
 		}
-		//rect(this.x,this.y+2*this.h/3,this.w-1,this.h/3-1)
+		rect(this.x,this.y+2*this.h/3,this.w-1,this.h/3-1)
+
 		fill(0)
 		if(wasd[0]!=="&"){
 		text(this.wasd[0]+"\n"+"undo",this.x+this.w*17/21+3,this.y+this.h/3,this.w*2/21-1,this.h*1/6)
